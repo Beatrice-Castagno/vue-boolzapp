@@ -47,7 +47,7 @@ flex-direction: column;
   width: 70%;
 }
 /* box dati utente */
-.box-utente-data {
+.box-info-header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -67,11 +67,13 @@ flex-direction: column;
 }
 
 .icons-avatar > i {
+  font-size: 18px;
 padding: 0 5px;
 color: #B1B1B1;
 }
 
-.avatar-utente {
+.avatar-utente,
+.avatar-conversation {
   height: 50px;
   border-radius: 50%;
 }
@@ -85,7 +87,7 @@ color: #B1B1B1;
   padding: 12px;
 }
 
-.bell-notifications i {
+.fa-bell-slash {
   font-size: 20px;
   color: #8EDAFC;
   border-radius: 50%;
@@ -151,7 +153,7 @@ color: #B1B1B1;
   padding: 10px;
 }
 
-.single-conversation > img {
+.avatar-contact {
   height: 60px;
   border-radius: 50%;
 }
@@ -161,3 +163,26 @@ color: #B1B1B1;
 }
 /* /conversazione contatti */
 /* /box left */
+
+/* box-right */
+/* box info conversazione aperta */
+.box-massages {
+  background-color:
+}
+
+.box-name-conversation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-conversation {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.info-conversation > h6 {
+  color: #6B7376;
+}
+/* /box info conversazione aperta */

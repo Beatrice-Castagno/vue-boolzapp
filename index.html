@@ -23,7 +23,7 @@
         <!-- box contatti -->
         <div class="box-contact">
           <!-- box dati utente -->
-          <div class="box-utente-data">
+          <div class="box-info-header">
             <div class="avatar">
               <img class="avatar-utente" v-bind:src="avatarUtente" alt="io-avatar">
               <h4>{{nomeUtente}}</h4>
@@ -52,23 +52,43 @@
             <!-- /box link attiva notifiche -->
           </div>
           <!-- /box attiva notifiche -->
+          <!-- input ricerca -->
           <div class="input-search-contacts">
             <div class="button-search">
               <button type="button"><i class="fas fa-search"></i></button>
             </div>
             <input class="input-search" type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputContact">
           </div>
+          <!-- /input ricerca -->
+          <!-- box elenco conversazioni -->
           <div class="conversations">
-            <div class="single-conversation" v-for="element in contacts">
+            <div class="single-conversation" v-for="element in contacts" @click="viewConversation(element)">
               <img class="avatar-contact" v-bind:src=`img/avatar${element.avatar}.jpg` alt="avatar contatto">
               <h4>{{element.name}}</h4>
             </div>
           </div>
+          <!-- /box elenco conversazioni -->
         </div>
        <!-- /box contatti -->
 
         <div class="box-messages">
-
+          <div class="box-info-header">
+              <div class="avatar">
+                <img class="avatar-conversation" v-bind:src=`img/avatar${chatVisualizzata.avatar}.jpg` alt="avatar contatto">
+                <div class="info-conversation">
+                  <h4>{{chatVisualizzata.name}}</h4>
+                  <h6>Ultimo accesso oggi alle</h6>
+                </div>
+              </div>
+              <!-- icone -->
+              <div class="icons-avatar">
+               <i class="fas fa-search"></i>
+               <i class="fas fa-paperclip"></i>
+               <i class="fas fa-ellipsis-v"></i>
+              </div>
+              <!-- /icone -->
+            </div>
+          </div>
         </div>
       </div>
      <!-- /box centrale -->

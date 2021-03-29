@@ -86,8 +86,20 @@ var app = new Vue (
             ],
         },
     ],
+    chatVisualizzata: {},
   },
     methods: {
+      viewConversation: function (element) {
+       this.chatVisualizzata = element;
+     },
+
+      getContact: function() {
+        return this.contacts[0];
+      }
     },
+
+    created: function () {
+      this.chatVisualizzata = this.getContact();
+    }
   },
 );
