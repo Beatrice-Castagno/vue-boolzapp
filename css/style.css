@@ -5,10 +5,12 @@
 }
 
 .container-app {
+  /* position: relative; */
 height: 100vh;
 }
 
 .bg-green {
+  position: relative;
   height: 15%;
   width: 100%;
   background-color: #009688;
@@ -17,5 +19,78 @@ height: 100vh;
 .bg-gray {
   height: 85%;
   width: 100%;
+  position:relative;
   background-color: #DBDBD2;
+}
+
+.container-box {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  display: flex;
+  height: 600px;
+  width: 900px;
+  background-color: blue;
+}
+
+.box-contact {
+min-width: 30%;
+display: flex;
+flex-direction: column;
+}
+
+.box-messages {
+  width: 70%;
+}
+
+.utente-data {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  background-color: #EAEAEA;
+}
+
+.utente-data > h4 {
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+.avatar-utente {
+  height: 60px;
+  border-radius: 50%;
+}
+
+.notifications {
+  display: flex;
+  background-color:  #8EDAFC;
+  padding: 12px;
+}
+
+.bell-notifications i {
+  font-size: 20px;
+  color: #8EDAFC;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.box-active-notifications {
+  margin-left: 15px;
+}
+
+.box-active-notifications > p {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.box-active-notifications > a {
+  color: gray;
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.box-active-notifications > a:hover {
+ color: darkgrey;
 }
