@@ -9,6 +9,7 @@
 height: 100vh;
 }
 
+/* background */
 .bg-green {
   position: relative;
   height: 15%;
@@ -22,6 +23,7 @@ height: 100vh;
   position:relative;
   background-color: #DBDBD2;
 }
+/* /background */
 
 .container-box {
   position: absolute;
@@ -33,8 +35,9 @@ height: 100vh;
   background-color: blue;
 }
 
+/* box left */
 .box-contact {
-min-width: 30%;
+min-width: 40%;
 display: flex;
 flex-direction: column;
 }
@@ -42,18 +45,29 @@ flex-direction: column;
 .box-messages {
   width: 70%;
 }
-
-.utente-data {
+/* box dati utente */
+.box-utente-data {
   display: flex;
-  align-items: center;
-  align-content: center;
+  justify-content: space-between;
   padding: 10px;
   background-color: #EAEAEA;
 }
 
-.utente-data > h4 {
+.avatar > h4 {
   margin-left: 15px;
   font-size: 16px;
+}
+
+.avatar,
+.icons-avatar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.icons-avatar > i {
+padding: 0 5px;
+color: #B1B1B1;
 }
 
 .avatar-utente {
@@ -61,6 +75,9 @@ flex-direction: column;
   border-radius: 50%;
 }
 
+/* /box dati utente */
+
+/* box notifiche */
 .notifications {
   display: flex;
   background-color:  #8EDAFC;
@@ -94,3 +111,35 @@ flex-direction: column;
 .box-active-notifications > a:hover {
  color: darkgrey;
 }
+/* /box notifiche */
+
+/* input cerca */
+.input-search-contacts {
+  padding: 5px;
+  display: flex;
+}
+
+.button-search > button {
+  padding: 5px 20px;
+  color: #B1B1B1;
+  border: 1px solid lightgrey;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.fa-search {
+  font-size: 15px;
+}
+
+.input-search {
+  width:100%;
+  padding: 5px;
+  border: 1px solid lightgrey;
+  outline: none;
+  font-size: 12px;
+}
+
+
+/* /input cerca */
+/* /box left */

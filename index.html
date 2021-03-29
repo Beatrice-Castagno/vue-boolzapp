@@ -23,9 +23,18 @@
         <!-- box contatti -->
         <div class="box-contact">
           <!-- box dati utente -->
-          <div class="utente-data">
-            <img class="avatar-utente" v-bind:src="avatar" alt="io-avatar">
-            <h4>{{nome_utente}}</h4>
+          <div class="box-utente-data">
+            <div class="avatar">
+              <img class="avatar-utente" v-bind:src="avatar" alt="io-avatar">
+              <h4>{{nomeUtente}}</h4>
+            </div>
+            <!-- icone -->
+            <div class="icons-avatar">
+             <i class="fas fa-circle-notch"></i>
+             <i class="fas fa-comment-alt"></i>
+             <i class="fas fa-ellipsis-v"></i>
+            </div>
+            <!-- /icone -->
           </div>
           <!-- /box dati utente -->
           <!-- box attiva notifiche -->
@@ -43,8 +52,15 @@
             <!-- /box link attiva notifiche -->
           </div>
           <!-- /box attiva notifiche -->
+          <div class="input-search-contacts">
+            <div class="button-search">
+              <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+            <input class="input-search" type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputContact">
+          </div>
         </div>
        <!-- /box contatti -->
+
         <div class="box-messages">
 
         </div>
