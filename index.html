@@ -21,7 +21,7 @@
       <!-- box centrale -->
       <div class="container-box">
         <!-- box contatti -->
-        <div class="box-contact">
+        <aside class="box-contact">
           <!-- box dati utente -->
           <div class="box-info-header">
             <div class="avatar">
@@ -30,9 +30,9 @@
             </div>
             <!-- icone -->
             <div class="icons-avatar">
-             <i class="fas fa-circle-notch"></i>
-             <i class="fas fa-comment-alt"></i>
-             <i class="fas fa-ellipsis-v"></i>
+             <a href="#"><i class="fas fa-circle-notch"></i></a>
+             <a href="#"><i class="fas fa-comment-alt"></i></a>
+             <a href="#"><i class="fas fa-ellipsis-v"></i></a>
             </div>
             <!-- /icone -->
           </div>
@@ -57,7 +57,9 @@
             <div class="button-search">
               <button type="button"><i class="fas fa-search"></i></button>
             </div>
-            <input class="input-search" type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputContact">
+
+              <input class="input-search" type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputContact">
+
           </div>
           <!-- /input ricerca -->
           <!-- box elenco conversazioni -->
@@ -68,10 +70,10 @@
             </div>
           </div>
           <!-- /box elenco conversazioni -->
-        </div>
+        </aside>
        <!-- /box contatti -->
-
         <div class="box-messages">
+          <!-- box avatar e orario accesso conversazione utente -->
           <div class="box-info-header">
               <div class="avatar">
                 <img class="avatar-conversation" v-bind:src=`img/avatar${chatVisualizzata.avatar}.jpg` alt="avatar contatto">
@@ -82,12 +84,21 @@
               </div>
               <!-- icone -->
               <div class="icons-avatar">
-               <i class="fas fa-search"></i>
-               <i class="fas fa-paperclip"></i>
-               <i class="fas fa-ellipsis-v"></i>
+               <a href="#"><i class="fas fa-search"></i></a>
+               <a href="#"><i class="fas fa-paperclip"></i></a>
+               <a href="#"><i class="fas fa-ellipsis-v"></i></a>
               </div>
               <!-- /icone -->
             </div>
+            <!-- /box avatar e orario accesso conversazione utente -->
+            <div class="bg-conversation"></div>
+            <!-- box input scrittura e invio msg -->
+            <div class="input-text-msg">
+              <a href="#"><i class="far fa-smile"></i></a>
+              <input class="text-area-msg" placeholder="Scrivi un messaggio" cols="30" rows="5" type="textarea">
+              <a href="#"><i class="fas fa-microphone"></i></a>
+            </div>
+            <!-- /box input scrittura e invio msg -->
           </div>
         </div>
       </div>
