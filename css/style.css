@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-app {
+height: 100vh;
+}
+
+.bg-green {
+  height: 15%;
+  width: 100%;
+  background-color: #009688;
+}
+
+.bg-gray {
+  height: 85%;
+  width: 100%;
+  background-color: #DBDBD2;
+}
