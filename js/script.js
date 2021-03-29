@@ -2,7 +2,7 @@ var app = new Vue (
   {
     el: "#app",
     data: {
-    avatar: "img/avatar_io.jpg",
+    avatarUtente: "img/avatar_io.jpg",
     nomeUtente: "Nome Utente",
     inputContact: "",
     contacts: [

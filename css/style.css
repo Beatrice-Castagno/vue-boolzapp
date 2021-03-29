@@ -30,13 +30,14 @@ height: 100vh;
   top: 20%;
   left: 25%;
   display: flex;
-  height: 600px;
-  width: 900px;
+  height: 700px;
+  width: 800px;
   background-color: blue;
 }
 
 /* box left */
 .box-contact {
+height: 100%;
 min-width: 40%;
 display: flex;
 flex-direction: column;
@@ -71,7 +72,7 @@ color: #B1B1B1;
 }
 
 .avatar-utente {
-  height: 60px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -140,6 +141,23 @@ color: #B1B1B1;
   font-size: 12px;
 }
 
-
 /* /input cerca */
+/* conversazione contatti*/
+
+.single-conversation {
+  display: flex;
+  background-color: #fff;
+  width:100%;
+  padding: 10px;
+}
+
+.single-conversation > img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+.single-conversation > h4 {
+  margin-left: 20px;
+}
+/* /conversazione contatti */
 /* /box left */
