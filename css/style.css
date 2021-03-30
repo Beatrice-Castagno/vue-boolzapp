@@ -9,7 +9,11 @@
  height: 100vh;
 }
 
-/* background */
+body {
+ font-family: 'Lato', sans-serif;
+}
+
+/* background e color */
 .bg-green {
   position:relative;
   height: 15%;
@@ -23,7 +27,15 @@
   width: 100%;
   background-color: #DBDBD2;
 }
-/* /background */
+
+.lightgreen {
+  background-color: #D5F9BA;
+}
+
+.white {
+  background-color: #fff;
+}
+/* /background e color*/
 
 .container-box {
   position: absolute;
@@ -158,6 +170,7 @@ flex-direction: column;
   width:100%;
   padding: 15px;
   border-bottom: 1px solid #EAEAEA;
+  cursor: pointer;
 }
 
 .avatar-contact {
@@ -196,7 +209,45 @@ flex-direction: column;
   height: 80%;
   width: 100%;
   background-image: url("../img/mine.jpg");
+  padding: 50px;
 }
+.container-msg {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-msg-sent {
+  align-items: flex-end;
+}
+
+.container-msg-recived {
+  align-items: flex-start;
+}
+
+.msg-sent,
+.msg-recived {
+ display: flex;
+ flex-direction: column;
+  height: 80px;
+  width: 300px;
+  border-radius: 12px;
+  border: none;
+  padding: 10px;
+  margin: 6px 0;
+}
+
+.container-date-hour {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end ;
+}
+
+.date-hour {
+  font-size: 10px;
+  color: #B1B1B1;
+}
+
 /* /main conversation */
 /* box input msg */
 .input-text-msg {
@@ -209,9 +260,9 @@ flex-direction: column;
 
 .fa-smile,
 .fa-microphone {
-  font-size: 35px;
+  font-size: 30px;
   color: #6B7376;
-  padding: 0 30px;
+  padding: 0 35px;
 }
 
 .fa-smile:hover {
