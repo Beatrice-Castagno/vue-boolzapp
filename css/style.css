@@ -82,6 +82,10 @@ flex-direction: column;
  color: #B1B1B1;
 }
 
+.icons-avatar a:hover {
+ color: grey;
+}
+
 .avatar-utente,
 .avatar-conversation {
   height: 50px;

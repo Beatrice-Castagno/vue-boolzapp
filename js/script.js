@@ -45,7 +45,7 @@ var app = new Vue (
                 {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
+                    status: 'sent'
                 }
             ],
         },
@@ -90,6 +90,7 @@ var app = new Vue (
         },
     ],
     chatVisualizzata: {},
+    nuovoMessaggio: "",
   },
     methods: {
       viewConversation: function (element) {
@@ -106,6 +107,17 @@ var app = new Vue (
         });
         element.colore = 'lightgrey';
       },
+
+      sentMsg: function () {
+       if (this.nuovoMessaggio !== "") {
+         this.chatVisualizzata.messages.push({
+           date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+           message: this.nuovoMessaggio,
+           status: 'sent'
+         });
+         this.nuovoMessaggio = "";
+       }
+     },
 
     },
 

@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <!-- /FONT GOOGLE -->
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <title>BOOLZAP</title>
 </head>
@@ -120,7 +121,7 @@
             <!-- box input scrittura e invio msg -->
             <div class="input-text-msg">
               <a href="#"><i class="far fa-smile"></i></a>
-              <input class="text-area-msg" placeholder="Scrivi un messaggio" cols="30" rows="5" type="textarea">
+              <input class="text-area-msg" placeholder="Scrivi un messaggio" cols="30" rows="5" type="textarea" v-model="nuovoMessaggio" @keyup.13="sentMsg">
               <a href="#"><i class="fas fa-microphone"></i></a>
             </div>
             <!-- /box input scrittura e invio msg -->
