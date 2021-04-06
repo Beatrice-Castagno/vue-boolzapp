@@ -89,10 +89,26 @@ var app = new Vue (
             ],
         },
     ],
+    contactsBis: [],
+    ricercaChat: "",
     chatVisualizzata: {},
     nuovoMessaggio: "",
-  },
+    noContacts: "Nessun contatto trovato",
+   },
+
+    created: function () {
+      this.chatVisualizzata = this.getContact();
+      this.contactsBis = this.contacts;
+    },
+
     methods: {
+
+      searchChat: function() {
+         this.contactsBis = this.contacts.filter( (element) => {
+         return element.name.toLowerCase().includes(this.ricercaChat.toLowerCase());
+       });
+      },
+
       viewConversation: function (element) {
        this.chatVisualizzata = element;
      },
@@ -107,7 +123,6 @@ var app = new Vue (
         });
         element.colore = 'lightgrey';
       },
-
 
       sentMsg: function () {
        if (this.nuovoMessaggio !== "") {
@@ -129,11 +144,6 @@ var app = new Vue (
          }, 2000);
        }
      }
-
-    },
-
-    created: function () {
-      this.chatVisualizzata = this.getContact();
     }
   },
 );

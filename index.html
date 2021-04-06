@@ -63,16 +63,17 @@
               <button type="button"><i class="fas fa-search"></i></button>
             </div>
 
-              <input class="input-search" type="text" placeholder="Cerca o inizia una nuova chat">
+            <input class="input-search" type="text" placeholder="Cerca o inizia una nuova chat" v-model="ricercaChat" @keyup="searchChat">
 
           </div>
           <!-- /input ricerca -->
           <!-- box elenco conversazioni -->
           <div class="conversations">
-            <div class="single-conversation" v-for="element in contacts" @click="viewConversation(element); cambiaColore(element);" v-bind:style='{backgroundColor: element.colore}'>
+            <div class="single-conversation" v-for="element in contactsBis" @click="viewConversation(element); cambiaColore(element);" v-bind:style='{backgroundColor: element.colore}'>
               <img class="avatar-contact" v-bind:src="'img/avatar' + element.avatar + '.jpg'" v-bind:alt="element.name">
               <h4>{{element.name}}</h4>
             </div>
+            <h3 v-if="contactsBis.length == 0">{{noContacts}}</h3>
           </div>
           <!-- /box elenco conversazioni -->
         </aside>

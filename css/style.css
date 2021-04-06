@@ -166,6 +166,7 @@ flex-direction: column;
 /* conversazione contatti*/
 .conversations {
   height: 75%;
+  overflow: auto;
 }
 
 .single-conversation {
@@ -184,6 +185,12 @@ flex-direction: column;
 
 .single-conversation > h4 {
   margin-left: 20px;
+}
+
+.conversations > h3 {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
 }
 /* /conversazione contatti */
 /* /box left */
@@ -214,6 +221,7 @@ flex-direction: column;
   width: 100%;
   background-image: url("../img/mine.jpg");
   padding: 50px;
+  overflow: auto;
 }
 .container-msg {
   display: flex;
