@@ -108,6 +108,7 @@ var app = new Vue (
         element.colore = 'lightgrey';
       },
 
+
       sentMsg: function () {
        if (this.nuovoMessaggio !== "") {
          this.chatVisualizzata.messages.push({
@@ -116,8 +117,18 @@ var app = new Vue (
            status: 'sent'
          });
          this.nuovoMessaggio = "";
+
+        const messages = this.chatVisualizzata.messages;
+
+         setTimeout(function(){
+             messages.push({
+               date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+               message: "Ok",
+               status: 'received'
+             });
+         }, 2000);
        }
-     },
+     }
 
     },
 
